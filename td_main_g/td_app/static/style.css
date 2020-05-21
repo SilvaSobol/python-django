@@ -1,0 +1,24 @@
+
+*{
+    width:900px;
+}
+
+body{
+    display:inline-block;
+    background-color:rgb(59, 184, 140);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    margin-left:250px;
+    margin-top: 70px;
+    color:whitesmoke;
+}
+
+img{
+    border: 10px;
+    border-collapse: separate;
+    margin-left: 180px;
+    margin-top: 25px;
+
+}

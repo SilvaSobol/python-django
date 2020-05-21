@@ -1,0 +1,22 @@
+<!DOCTYPE <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Time Display</title>
+        {% load static from staticfiles %} <!--to set a general static file to avoid hard coding-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+    </head>
+    <body>
+        <h1>The current time is: {{time}}</h1>
+        <img src="{% static 'tic-toc.gif'%}" alt="a gif abstract file">
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
