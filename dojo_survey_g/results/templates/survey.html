@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dojo Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Ready to take a Dojo survey?</h1>
+        <form action="/display" method="POST">
+            {% csrf_token %}<br>
+            Name: <input type="text" name="name"><br>
+
+            Dojo Location: <select name="location">
+                <option value = "Bay Area">Bay Area</option>
+                <option value = "Seattle">Seattle</option>
+                <option value = "New York">New York</option>
+                <option value = "Online">Online</option>
+                <option value = "DC">DC</option>
+            </select>
+            <br>
+            Favorite Coding Language: <select name = 'language'>
+                <option value = "">Python</option>
+                <option value = "">C#</option>
+                <option value = "">JAVA</option>
+                <option value = "">JavaScript</option>
+            </select>
+            <br>
+
+            Comments:<br>
+            <textarea name="comments"></textarea>
+            <br>
+        
+            <!--Gender: <radio name ="gender">
+            <input type="radio" name="" id="">
+            <label for="male">Male</label>
+
+            <input type="radio" name="" id="other">
+            <label for="female">Female</label>
+
+            <input type="radio" name="" id="other">
+            <label for="other">Other</label>
+            </radio>
+            <br>-->
+
+            How did you hear about us?:<checkbox name ="how">
+            <input type="checkbox" name="source" id="fb">
+            <label for="fb">Facebook</label>
+        
+            <input type="checkbox" name="source" id="np">
+            <label for="np">Newspaper</label>
+        
+            <input type="checkbox" name="source" id="rf">
+            <label for="rf">Referral</label>
+            </checkbox>
+            <br> 
+        <input type ="submit" value="Create Account">
+    </form>
+    </body>
+</html>
