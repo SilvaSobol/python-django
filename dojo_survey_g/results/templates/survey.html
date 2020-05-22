@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <title>Dojo Survey</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +12,7 @@
     </head>
     <body>
         <h1>Ready to take a Dojo survey?</h1>
+
         <form action="/display" method="POST">
             {% csrf_token %}<br>
             Name: <input type="text" name="name"><br>
@@ -22,31 +25,30 @@
                 <option value = "DC">DC</option>
             </select>
             <br>
-            Favorite Coding Language: <select name = 'language'>
-                <option value = "">Python</option>
-                <option value = "">C#</option>
-                <option value = "">JAVA</option>
-                <option value = "">JavaScript</option>
+            Favorite Coding Language: <select name = "language">
+                <option value = "Python">Python</option>
+                <option value = "C#">C#</option>
+                <option value = "JAVA">JAVA</option>
+                <option value = "JavaScrip">JavaScript</option>
             </select>
             <br>
 
             Comments:<br>
             <textarea name="comments"></textarea>
             <br>
+    
+                <!--<p>Male<input type="radio" name="gender"></p>
+                <p>Female<input type="radio" name="gender"></p>
+                <p>Other<input type="radio" name="gender"></p>-->
         
-            <!--Gender: <radio name ="gender">
-            <input type="radio" name="" id="">
             <label for="male">Male</label>
-
-            <input type="radio" name="" id="other">
+            <input type="radio" id="male" name="gender" value="male">
             <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="decline">Prefer not to say</label>
+            <input type="radio" id="decline" name="gender" value="decline"><br>
 
-            <input type="radio" name="" id="other">
-            <label for="other">Other</label>
-            </radio>
-            <br>-->
-
-            How did you hear about us?:<checkbox name ="how">
+           How did you hear about us?:<checkbox name ="how">
             <input type="checkbox" name="source" id="fb">
             <label for="fb">Facebook</label>
         
@@ -56,7 +58,7 @@
             <input type="checkbox" name="source" id="rf">
             <label for="rf">Referral</label>
             </checkbox>
-            <br> 
+            <br>
         <input type ="submit" value="Create Account">
     </form>
     </body>
