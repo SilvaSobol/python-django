@@ -1,0 +1,91 @@
+body{
+    background-color:blue;
+    padding: 20px;
+   
+
+}
+input{
+    display: inline-block;
+}
+.wrapper h3{
+    text-align: center;
+    height:40px;
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+.container{
+    background-color:lightblue;
+}
+.box1{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 50px;
+    width:175px;
+    height: 200px;
+    background-color: blue;
+}
+.box2{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 50px;
+    width: 175px;
+    height: 200px;
+    background-color: blue
+}
+.box3{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 50px;
+    width:175px;
+    height: 200px;
+    background-color:blue;
+}
+.box4{
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    margin: 50px;
+    width:175px;
+    height: 200px;
+    background-color:blue;
+}
+.inner h4{
+    background-color: ghostwhite;
+    height:150px;
+    
+}
+.lost{
+    color:green;
+}
+.log{
+    padding:25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.log h3{
+    color:black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.btn{
+   display: inline-block;
+   margin-left: 510px;
+   background-color: green;
+   color:white;
+   width:100px;
+}
+.click{
+    margin-top: 10px;
+    background-color: yellow;
+    border-radius: 50px;
+}
+img{
+    height:75px;
+    width:75px;
+}
+.small{
+    font-size:smaller;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ninja Gold Game</title>
+        <meta name="description" content="">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'ng_style.css'%}">
+    </head>
+    <body>
+        <div class ="wrapper">
+            <h3>Your Gold: {{request.session.total}}</h3>
+            <div class="container">
+                <div class = "box1">
+                    <form action="/find" method ="POST">
+                        <div class = "inner">
+                        {% csrf_token %}
+                            <h4 class='text_default'>
+                                <p>FARM</p> 
+                                <p class="small">(earn 10-20 golds)</p>
+                                <img src="{% static 'gold_bar.gif'%}" alt="gold bar"><br>
+                                <input type ="hidden" name="block" value="farm"/><br>
+                                <input class="click" type ="Submit" name="btn" value="Find Gold!">
+                            </h4>
+                        </div>
+                    </form>
+                </div>
+                <div class="box2">
+                    <form action="/find" method ="POST">
+                        <div class = "inner">
+                        {% csrf_token %}
+                            <h4 class='text_default'>
+                                <p>CAVE</p> 
+                                <p class="small">(earn 5-10 golds)</p>
+                                <img src="{% static 'gold_bar.gif'%}" alt="gold bar">
+                                <br>
+                                <input type ="hidden" name="block" value="cave"/><br>
+                                <input class="click" 
+                                type ="Submit" name="btn" value="Find Gold!"/>
+                            </h4>
+                        </div>
+                    </form>
+                </div>
+                <div class="box3">
+                    <form action="/find" method ="POST">
+                        <div class = "inner">
+                        {% csrf_token %}
+                            <h4 class='text_default'>
+                                <p>HOUSE</p> 
+                                <p class="small">(earn 2-5 golds)</p>
+                                <img src="{% static 'gold_bar.gif'%}" alt="gold bar">
+                                <br>
+                                <input type ="hidden" name="block" value="house"/><br>
+                                <input class="click" type ="Submit" name="btn" value="Find Gold!"/>
+                            </h4>
+                        </div>
+                    </form>
+                </div>
+                <div class ="box4">
+                    <form action="/find" method ="POST">
+                        <div class = "inner">
+                        {% csrf_token %}
+                            <h4 class='text_default'>
+                                <p>CASINO</p> 
+                                <p class="small">(earn/lose 0-50 golds)</p>
+                                <img src="{% static 'gold_bar.gif'%}" alt="gold bar">
+                                <br>
+                                <input type ="hidden" name="block" value="casino"/><br>
+                                <input class="click" type ="Submit" name="btn" value="Find Gold!"/>
+                            </h4>
+                        </div>
+                    </form>
+                </div>
+                <form action ="/reset" method = "POST">
+                    {% csrf_token %}
+                    <input type ="submit" class = "btn"" value="RESET"/>
+                </form>
+                <div class="log">
+                    <h3>Activity Log:</h3>
+                    <div class="col-lg-12" style="height:400px; overflow: scroll">
+                        {% for log in request.session.log reversed %}
+                            {% if "lost" in log %}
+                                <h4 class="text-earned">{{ log }}</h4>
+                            {% else %}
+                                <h4 class={{request.session.style}}>{{ log }}</h4>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
