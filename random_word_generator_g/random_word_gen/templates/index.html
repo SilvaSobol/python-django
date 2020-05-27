@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Random Word Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'rwg_style.css'%}">
+    </head>
+    <body>
+        <div id ="form"></div>
+            <form action = '/random_word' method = 'POST'>
+            {% csrf_token %}
+            <h1> Random Word:</h1>
+            <input id= "word" type ="text" value={{request.session.word}}>
+            <input type="submit" value="Generate">
+            <h2>Number of guesses: {{request.session.count}}</h2>
+            <a class = "one" href = "/reset">Reset</a>
+
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-color: azure;
+    padding:200px;
+
+}
+
+h1{
+    text-align: center;
+
+}
+
+form{
+    text-align: center;
+}
+.one{
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: teal;
+    text-decoration: none;
+    
+}
+
+
+
+
